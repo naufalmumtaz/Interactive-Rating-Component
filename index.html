@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Component</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card card-1" id="card-1">
+    <div class="card-body">
+        <div class="icon"></div>
+        <h2 class="title">How did we do?</h2>
+        <p class="description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering1</p>
+        <form class="formData">
+            <div class="rating">
+                <!-- <button id="rate" onclick="">1</button>
+                <button id="rate" onclick="">2</button>
+                <button id="rate" onclick="">3</button>
+                <button id="rate" onclick="">4</button>
+                <button id="rate" onclick="">5</button> -->
+                <input type="radio" name="radio" value="1">
+                <input type="radio" name="radio" value="2">
+                <input type="radio" name="radio" value="3">
+                <input type="radio" name="radio" value="4">
+                <input type="radio" name="radio" value="5">
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="card card-2" id="card-2">
+    <div class="card-body">
+        <div class="icon"></div>
+        <p class="result" id="result">You selected 4 out of 5</p>
+        <h2 class="title">Thank You!</h2>
+        <p class="description">We appreciate you taking the time to give a rating. if you ever need more support, don't hesitate to get in touch!</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    const card1 = document.getElementById('card-1');
+    const card2 = document.getElementById('card-2');
+    const resultTxt = document.getElementById('result');
+
+    card2.classList.toggle('hidden');
+    
+    const formData = document.querySelector('.formData');
+    formData.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let hasilRate = document.querySelector('input[name="radio"]:checked').value;
+        card2.classList.toggle('hidden');
+        card1.classList.add('hidden');
+        resultTxt.innerHTML = `You selected ${hasilRate} out of 5`;
+    });
+    
+</script>
+
+</body>
+</html>

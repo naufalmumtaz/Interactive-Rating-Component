@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;400&display=swap');
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+}
+.card-1 {
+    animation: fadeIn 0.7s;
+    background-image: linear-gradient(to top, hsl(215, 27%, 9%), hsl(213, 19%, 18%));
+    padding: 2em;
+    width: 320px;
+    margin: auto;
+    color: white;
+    border-radius: 1em;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin-top: 10vh;
+}
+.card-1 .card-body .icon::before {
+    content: url(interactive-rating-component-main/images/icon-star.svg);
+    display: block;
+    text-align: center;
+    line-height: 3.5em;
+    width: 3em;
+    height: 3em;
+    border-radius: 5em;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+}
+.card-1 .card-body .title {
+    font-weight: 700;
+}
+.card-1 .card-body .description {
+    font-size: 15px;
+    font-weight: 300;
+    color: hsl(217, 12%, 63%);
+}
+.card-1 .card-body .rating {
+    display: flex;
+    column-gap: 1em;
+    margin-top: 1.6em;
+}
+.card-1 .card-body .rating input:nth-child(1){
+    position: relative;
+}
+.card-1 .card-body .rating input:nth-child(1)::after {
+    content: '1';
+    position: absolute;
+    right: 45%;
+    top: 33%;
+}
+.card-1 .card-body .rating input:nth-child(2){
+    position: relative;
+}
+.card-1 .card-body .rating input:nth-child(2)::after {
+    content: '2';
+    position: absolute;
+    right: 45%;
+    top: 33%;
+}
+.card-1 .card-body .rating input:nth-child(3){
+    position: relative;
+}
+.card-1 .card-body .rating input:nth-child(3)::after {
+    content: '3';
+    position: absolute;
+    right: 45%;
+    top: 33%;
+}
+.card-1 .card-body .rating input:nth-child(4){
+    position: relative;
+}
+.card-1 .card-body .rating input:nth-child(4)::after {
+    content: '4';
+    position: absolute;
+    right: 45%;
+    top: 33%;
+}
+.card-1 .card-body .rating input:nth-child(5){
+    position: relative;
+}
+.card-1 .card-body .rating input:nth-child(5)::after {
+    content: '5';
+    position: absolute;
+    right: 45%;
+    top: 33%;
+}
+.card-1 .card-body .rating input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 5em;
+  border: none;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(217, 12%, 63%);
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+.card-1 .card-body .rating input:hover {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+.card-1 .card-body .rating input:active {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+.card-1 .card-body .btn-submit {
+    background-color: hsl(25, 97%, 53%);
+    width: 100%;
+    padding: 10px;
+    border-radius: 5em;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-top: 2em;
+    cursor: pointer;
+}
+.card-1 .card-body .btn-submit:active {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+.card-2 {
+    animation: fadeIn 0.7s;
+    background-image: linear-gradient(to top, hsl(215, 27%, 9%), hsl(213, 19%, 18%));
+    padding: 2em;
+    width: 320px;
+    margin: auto;
+    color: white;
+    border-radius: 1em;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 10vh;
+}
+.card-2 .card-body .icon {
+    content: url(interactive-rating-component-main/images/illustration-thank-you.svg);
+    width: 8em;
+    margin: auto;
+    margin-bottom: 2em;
+}
+.card-2 .card-body .result {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(217, 12%, 63%);
+    background-color: hsl(213, 19%, 18%);
+    width: 50%;
+    padding: 0.3em 1em;
+    border-radius: 5em;
+    margin: auto;
+    color: hsl(25, 97%, 53%);
+}
+.card-2 .card-body .title {
+    font-weight: 700;
+}
+.card-2 .card-body .description {
+    font-size: 15px;
+    font-weight: 300;
+    color: hsl(217, 12%, 63%);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
